@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+#cameraContainer {
+  position: relative;
+  width: 800px;                /* camera viewport width */
+  height: 562px;
+  margin: 0 auto;              /* center horizontally */
+  z-index: 1;                  /* above extra image */
+}
+
+#extraImage {
+  position: fixed;             /* sticks to left of screen */
+  top: 0;
+  left: 0;
+  width: 400px;                /* adjust width */
+  height: 100%;
+  background-image: url('assets/bonnie.png');
+  background-size: cover;
+  background-position: left center;
+  opacity: 0.3;                /* semi-transparent */
+  z-index: 0;                  /* behind everything */
+}
+
+#cameraView {
+    width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  position: relative;
+  border: 7px solid #101111;
+}
+
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1600px;               /* wider than camera for panning */
+  height: 562px;
+  background-image: url('assets/fnafoffice.jpeg'); /* scene image */
+  background-size: cover;
+  background-position: left center;
+  transition: left 0.1s ease-out;
+ 
+}
+
+#cornerLink {
+  position: fixed;          /* stick to screen corner */
+  top: 20px;             /* distance from bottom */
+  right: 20px;              /* distance from right */
+  z-index: 10;              /* above everything */
+}
+
+#cornerLink img {
+  width: 80px;              /* size of your icon */
+  height: auto;
+  cursor: pointer;          /* pointer on hover */
+  transition: transform 0.2s, filter 0.3s;
+}
+
+#cornerLink img:hover {
+  transform: scale(1.1);
+    filter: brightness(1.2);  
+}

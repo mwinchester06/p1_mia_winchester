@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+     box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-image: url("assets/ipodbg.png");
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+  height: 100vh;                
+}
+
+.big-container{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+}
+
+.hand{
+    position: absolute;
+    width: 200px;
+   height: auto;
+    top: 3%;
+    left: 85%;
+}
+
+.ipod {
+   position: absolute;
+   width: 600px;
+   height: auto;
+   top: 100px;
+    left: 600px;
+}
+

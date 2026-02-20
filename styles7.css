@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+     box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+body, a, button, div, img {
+    cursor: url("assets/pokecursor.png"), auto !important;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+.big-container{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   z-index: 2;
+}
+
+.hand-link {
+  position: absolute;
+  top: 10px;
+  left: 1250px;
+  z-index: 2;
+  display: block;
+}
+
+.hand {
+  display: block;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.gameboy {
+  position: absolute;
+  width: 700px;
+  height: 600px;
+  top: 50px;
+  left: 200px;
+  z-index: 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gameboy-wrapper {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 700px;
+  height: 600px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.pinkpokeball {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  left: 40px;
+  z-index: 5;
+  background-image: url('assets/pinkpokeball.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+}
+
+.pinkpokeball-1:hover {
+  background-image: url('assets/cinderace.png');
+}
+
+
+.pinkpokeball-2:hover {
+  background-image: url('assets/mimikyu.png');
+}
+
+.pinkpokeball-3:hover {
+  background-image: url('assets/luxray.png');
+}
+
+.pinkpokeball-4:hover {
+  background-image: url('assets/gengar.png');
+}
+
+.pinkpokeball-5:hover {
+  background-image: url('assets/slowpoke.png');
+}
+
+.pinkpokeball-6:hover {
+  background-image: url('assets/golden.png');
+}
+
+
+.pinkpokeball-1 { top: 10px; }
+.pinkpokeball-2 { top: 130px; }
+.pinkpokeball-3 { top: 250px; }
+.pinkpokeball-4 { top: 370px; }
+.pinkpokeball-5 { top: 490px; }
+.pinkpokeball-6 { top: 610px; }
+
+
+.sidebar {
+   position: absolute;
+   width: 220px;
+   height: 97vh;
+    top: 4px;
+    left: 10px;
+    z-index: 0;
+}
+
+.glow-dot {
+  position: absolute;
+  top: 53.5%;
+  right: 52.4%;
+  width: 17px;
+  height: 17px;
+  background: #ff0000;
+  border-radius: 50%;
+  z-index: 4;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 90%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(255, 0, 0, 0.6);
+    opacity: 1;
+  }
+}

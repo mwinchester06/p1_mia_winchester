@@ -3,17 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="styles3.css">
+         <link rel="icon" type="image/png" href="assets/oldwin.png">
         <title>trinketshelf</title>
     </head>
     <body>
-        <h1> kitan club </h1>
-        <style>
-                p{
-                    color: yellow;
-                    font-family: times new romans;
-                    font-size: 25px;
-                }
-            </style>
-       <p> a little shrimp cat??? come onnnnnn </p>
+         <div class="big-container">
+            <img class="nyancat" src="assets/nyancat.png" id="nyancat">
+            <a href="index.html">
+                    <img src="assets/hand.png" class="hand">
+            </a>
+        </div>
+
+        <script>
+    const cat = document.getElementById("nyancat");
+
+    let x = 100;
+    let y = 100;
+
+    let dx = 3;
+    let dy = 3;
+
+    function animate() {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        const catWidth = cat.offsetWidth;
+        const catHeight = cat.offsetHeight;
+
+        x += dx;
+        y += dy;
+    
+        if (x + catWidth >= screenWidth) {
+            dx = -dx;
+            cat.style.transform = "scaleX(-1)"; // flip left
+        }
+
+ 
+        if (x <= 0) {
+            dx = -dx;
+            cat.style.transform = "scaleX(1)"; // flip right
+        }
+
+     
+        if (y + catHeight >= screenHeight || y <= 0) {
+            dy = -dy;
+             }
+
+        cat.style.left = x + "px";
+        cat.style.top = y + "px";
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
     </body>
 </html>

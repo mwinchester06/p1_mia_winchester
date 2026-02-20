@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+     box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow:hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;          
+}
+
+.big-container{
+   position: relative;
+   width: 100%;
+   height: 100vh;
+}
+
+.basket {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 800px;
+    height: auto;
+}

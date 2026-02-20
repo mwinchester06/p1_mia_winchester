@@ -4,16 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>trinketshelf</title>
+        <link rel="stylesheet" href="styles2.css">
+         <link rel="icon" type="image/png" href="assets/oldwin.png">
     </head>
     <body>
-        <h1> fuggler </h1>
-        <style>
-                p{
-                    color: orange;
-                    font-family: times new romans;
-                    font-size: 25px;
-                }
-            </style>
-       <p> interested in a fuggler, PURCHASE NOW </p>
-    </body>
-</html>
+    <div class="big-container">
+        <img id="click-image" src="assets/fuggler1.png" class="click-image">
+        <a href="index.html" target="_blank" class="hand"></a>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="assets/fuggmusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        const image = document.getElementById("click-image");
+        const music = document.getElementById("bg-music");
+
+        const images = [
+            "assets/fuggler1.png",
+            "assets/fuggler2.png",
+            "assets/fuggler3.png",
+            "assets/fuggler4.png",
+            "assets/fuggler5.png"
+        ];
+
+        let currentIndex = 0;
+        let musicStarted = false;
+
+        image.addEventListener("click", () => {
+            // Start music on first click
+            if (!musicStarted) {
+                music.play();
+                musicStarted = true;
+            }
+
+            // Cycle images
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0; 
+            }
+            image.src = images[currentIndex];
+        });
+    </script>
+</body>

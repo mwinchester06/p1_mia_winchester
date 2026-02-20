@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="styles4.css">
+         <link rel="icon" type="image/png" href="assets/oldwin.png">
+        <title>trinketshelf</title>
+    </head>
+    <body>
+         <div class="big-container">
+            <a href="index.html">
+                <img src="assets/hand.png" class="hand">
+            </a>
+            <img src="assets/ipod.png" class="ipod" onclick="playNextSong()">
+                <audio id="audioPlayer"></audio>
+        </div>
+
+        <script>
+    const songs = [
+        "assets/tonight.mp3",
+        "assets/busywoman.mp3",
+        "assets/pinkdiamond.mp3"
+    ];
+
+    let currentSong = 0;
+    const audioPlayer = document.getElementById("audioPlayer");
+
+    function playNextSong() {
+        audioPlayer.src = songs[currentSong];
+        audioPlayer.play();
+
+        currentSong++;
+        if (currentSong >= songs.length) {
+            currentSong = 0;
+        }
+    }
+</script>
+
+    </body>
+</html>

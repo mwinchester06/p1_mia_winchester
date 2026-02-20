@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>trinketshelf</title>
+        <link rel="icon" type="image/png" href="assets/oldwin.png">
+        <link rel="stylesheet" href="fnaf.css">
+    </head>
+    <body>
+    <div id="cameraContainer">
+  <div id="extraImage"></div>
+
+<a href="index.html" target="_blank" id="cornerLink">
+  <img src="assets/cc.png" alt="Corner Link">
+</a>
+  <div id="cameraView">
+    <div id="scene"></div>
+  </div>
+</div>
+
+<audio id="bgMusic" src="assets/fan.mp3" loop></audio>
+<script>
+const music = document.getElementById('bgMusic');
+document.addEventListener('click', () => music.play());
+</script>
+
+<script>
+  const cameraView = document.getElementById('cameraView');
+const scene = document.getElementById('scene');
+
+const viewportWidth = cameraView.clientWidth;
+const sceneWidth = scene.clientWidth;
+const maxOffset = sceneWidth - viewportWidth;
+
+let targetOffset = 0;
+let currentOffset = 0;
+
+document.addEventListener('mousemove', (e) => {
+  const rect = cameraView.getBoundingClientRect();
+  let relativeX = e.clientX - rect.left;
+  if (relativeX < 0) relativeX = 0;
+  if (relativeX > viewportWidth) relativeX = viewportWidth;
+  const pct = relativeX / viewportWidth;
+  targetOffset = -pct * maxOffset;
+});
+
+function animatePan() {
+  const speed = 0.05; // slower pan
+  currentOffset += (targetOffset - currentOffset) * speed;
+  scene.style.left = `${currentOffset}px`;
+  requestAnimationFrame(animatePan);
+}
+
+animatePan();
+</script>
+
+
+    </body>
+</html>

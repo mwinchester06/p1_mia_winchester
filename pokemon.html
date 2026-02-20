@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>trinketshelf</title>
+        <link rel="icon" type="image/png" href="assets/oldwin.png">
+        <link rel="stylesheet" href="styles7.css">
+    </head>
+    <body>
+        <audio id="bg-music" autoplay loop muted>
+            <source src="assets/battle2.mp3" type="audio/mpeg">
+        </audio>
+
+    <script>
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0.5;
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            audio.muted = false;
+            audio.play().catch(() => {});
+        }, 1000);
+    });
+    </script>
+
+      <img src="assets/pokemonbg.jpg" alt="" class="bg-image">
+        <div class="big-container">
+            <div class="gameboy-wrapper">
+                <img src="assets/gameboyy.png" alt="Game Boy" class="gameboy">
+                <div class="glow-dot"></div>
+            </div>
+            <div class="pinkpokeball pinkpokeball-1"> </div>
+            <div class="pinkpokeball pinkpokeball-2"></div>
+            <div class="pinkpokeball pinkpokeball-3"></div>
+            <div class="pinkpokeball pinkpokeball-4"></div>
+            <div class="pinkpokeball pinkpokeball-5"></div>
+            <a href="fnaf.html">
+                <div class="pinkpokeball pinkpokeball-6"></div>
+            </a>
+            <img src="assets/sidebar.png" alt="side bar" class="sidebar">
+            <a href="index.html" class="hand-link">
+                <img src="assets/hand.png" alt="" class="hand">
+            </a>
+        </div>
+
+        <audio id="bg-music" loop>
+    <source src="assets/battle.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    window.addEventListener('click', function () {
+        const audio = document.getElementById('bg-music');
+        audio.volume = 0.5; // optional (0.0 to 1.0)
+        audio.play();
+    }, { once: true });
+</script>
+
+    </body>

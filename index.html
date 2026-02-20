@@ -4,26 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>trinketshelf</title>
+        <link rel="icon" type="image/png" href="assets/oldwin.png">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div class = "body">
-        <h1> trinket shelf </h1>
-        <h2>
-            <nav>
-                <a href="smiski.html">smiski</a>
-            </nav>
-        </h2>
-        <h2>
-            <nav>
-                <a href="fuggler.html">fuggler</a>
-            </nav>
-        </h2>
-        <h2>
-            <nav>
-                <a href="kitanclub.html">shrimp cat</a>
-            </nav>
-        </h2>
-    </div>
+        <div class="background-container">
+            <img src="assets/trinketshelf.png" class="shelf">
+                <a href="smiski.html">
+                    <img src="assets/smiskiguy.png" id="smiskiguy" class="trinket" width="250px">
+                </a>
+                <a href="fuggler.html">
+                    <img src="assets/fuggler.png" id="fuggler" class="trinket" width = "250px">
+                </a>
+                <a href="kitanclub.html">
+                    <img src="assets/shrimpcat.png" id="shrimpcat" class="trinket" width="250px">
+                </a>
+                <a href="peachriot.html">
+                    <img src="assets/peachriot.png" id="peachriot" class="trinket" width="400px">
+                </a>
+                <a href="pug.html">
+                    <img src="assets/pug.png" id="pug" class="trinket" width="400px">
+                </a>
+                <a href="webkinz.html">
+                    <img src="assets/snowball.png" id="snowball" class="trinket" width="400px">
+                </a>
+                <a href="pokemon.html">
+                    <img src="assets/sylveon.png" id="sylveon" class="trinket" width="400px">
+                </a>
+                <a href="checkout.html">
+                    <img src="assets/thankyou.png" class="ticket">
+                </a>
+        </div>
+
+        <script>
+        const hoverSound = new Audio("assets/wii.mp3"); 
+        hoverSound.preload = "auto";
+        document.querySelectorAll('.trinket').forEach(img => {
+        img.addEventListener('mouseenter', () => {
+        hoverSound.currentTime = 0;
+        hoverSound.play();
+    });
+});
+</script>
     </body>
 </html>

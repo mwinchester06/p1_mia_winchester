@@ -1,3 +1,79 @@
-.body{
-    background-color: pink;
+*{
+    margin: 0;
 }
+
+.background-container{
+                width: 80%;
+                max-width: 1200px;
+                position:relative;
+                margin:0 auto;
+            } 
+            .shelf{
+                width: 100%;
+                display: block;
+            }
+
+            .trinket{
+                position: absolute;
+                bottom:63%;
+                width: 11%;
+                height:auto;
+            }
+
+            .trinket:hover {
+                filter: brightness(1.1);
+                transform: scale(1.05);
+                cursor:point;
+            }
+
+            #smiskiguy{
+                left:30%;
+                bottom:62.5%;
+            }
+
+            #fuggler{
+                left: 44%;
+            }
+
+            #shrimpcat{
+                left: 60%;
+                bottom:62%;
+            }
+
+            #peachriot{
+                left: 35%;
+                bottom:49%;
+                width: 15%;
+            }
+
+            #pug{
+                left: 54.3%;
+                bottom:49%;
+                width: 9%;
+            }
+
+            #snowball{
+                left: 30%;
+                bottom:36%;
+                width: 17%;
+            }
+
+            #sylveon{
+                left: 52%;
+                bottom:35.6%;
+                width: 17%;
+            }
+
+            .ticket{
+                position: absolute;
+                width: 36%;
+                max-width: 260px;
+                height: auto;
+                left:32%;
+                bottom:4%;
+            }
+
+            .ticket:hover {
+                filter: brightness(1.1);
+                transform: scale(1.05);
+                cursor:point;
