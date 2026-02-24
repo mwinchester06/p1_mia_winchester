@@ -52,14 +52,8 @@
                 width: 9%;
             }
 
-            #snowball{
-                left: 30%;
-                bottom:36%;
-                width: 17%;
-            }
-
             #sylveon{
-                left: 52%;
+                left: 42%;
                 bottom:35.6%;
                 width: 17%;
             }
@@ -67,10 +61,10 @@
             .ticket{
                 position: absolute;
                 width: 36%;
-                max-width: 260px;
+                max-width: 400px;
                 height: auto;
                 left:32%;
-                bottom:4%;
+                bottom:3%;
             }
 
             .ticket:hover {
